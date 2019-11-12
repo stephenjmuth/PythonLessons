@@ -3,12 +3,10 @@
 import sys
 # print(sys.version)
 
-# Extract keys from dict.
+# Extract keys from dict, return them in key_dict.
 def key_extractor(dict):
-    for entry in dict.items():
-        for key in entry:
-            print(key)
-#            key_dict.append(key)
+    for k,v in dict.items():
+        key_dict[k]=''
     return key_dict
 
 peoples=[
@@ -23,7 +21,7 @@ string1="The current user list is:"
 print("="*len(string1))
 print(string1)
 for person in peoples:
-    print(f"\n\t{i}. {person['first'].title()} {person['last'].title()}")
+    print(f"\n\t{i}. {person['first'].title()} {person['last'].title()} | User ID: {person['userid']} | Location: {person['city'].title()} | Automobile: {person['car'].title()} | Favorite #: {person['fav_num']}")
     i+=1
 print("="*len(string1))
 
@@ -32,8 +30,21 @@ more_peoples={
     'TT':['trevor','muth','3','colorado springs','none','yellow',],
     }
 
-print(f"\n{more_peoples}")
+#print(f"testing the state of the variable 'i': {i}") # Are there local variables in Python? What is best practice for iterator? Reset everytime you use it?
+i=1
+print("Print new users to be added:")
+for item in more_peoples:
+    print(f"\t{i}. {item} {more_peoples[item]}")
+
+#for i in test_dict : 
+#    print(i, test_dict[i]) 
+print("="*len(string1))
 
 key_dict={}
 key_extractor(peoples[0])
-# print(sublist[0])
+# Print keys extracted by key_extractor. 
+print(f"Print extracted keys:\n\t{key_dict}")
+print("="*len(string1))
+print("Need a function here to join new user data with extracted keys to import into peoples dict.")
+print("="*len(string1))
+
