@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 
+from funcs import func1
+from funcs import func12
+
 int1,int2=1,2
 var1="val1"
 list1=[1,2,3,]
 list2=[2,3,4,]
 
-#########################################
-### Define functions #########################
-#########################################
+#################################################
+### Define functions ### Define functions ### Define functions ###
+#################################################
+"""
 def func1(func_var1):
     print(f"\t\tCall func1 - print func_var1: {func_var1}")
     func_var2=func_var1*2
@@ -18,10 +22,10 @@ def func12(func_var11,func_var12):
     func_var22=func_var11*2
     func_var23=func_var12*2
     return func_var22,func_var23
-
-########################################################
-### Code starts here ########################################
-########################################################
+"""
+##################################################
+### Code starts here ### Code starts here ### Code starts here ###
+##################################################
 print("Initial print of variables:")
 print(f"\t1. Print var1: {var1}")
 print(f"\t2. Print list1: {list1}")
